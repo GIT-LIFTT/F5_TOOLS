@@ -10,7 +10,9 @@ ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh_client.connect(hostname=ip_address, username=username, password=password)
 
+# read in the list from a file in the same directory
 with open('vs') as f:
+    # split the lines
     vslist1 = f.read().splitlines()
 
 print("================")
